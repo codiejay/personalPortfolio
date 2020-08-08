@@ -5,7 +5,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <title>James Akpan</title>
-  <link rel='stylesheet' href='./css/index.css'>
+  <link rel='stylesheet' href='./index.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
   <script src='https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js'></script>
   <script src='https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js'></script>
@@ -66,24 +66,13 @@
         </div> -->
       </div>
     </section>
-    <section id='quote'>
-      <div id='quoteOne'>
-        <p>
-          Web Development has not just been another profession 
-          for me, it is something I really believe in, 
-          I belive in it’s good and it practicality. It empowers me
-        </p>
-        
+    <div id='newAboutSection'>
+      <div id="innerAbtSession">
+        <div id="nwAbtImg"></div>
+        <div id="pointer"></div>
+        <div id="pointer"></div>
       </div>
-      <div id='quoteTwo'>
-        <p>
-          I have spent a good amount of my time implementing 
-        the ideas and knowledge I have acquired.
-         And Growth has occurred. 
-        </p>
-      </div>
-    </section>
-
+    </div>
     <section id='goods'>
       <div id='goodsList'>
         <div id='goodOne'>
@@ -111,35 +100,100 @@
         </div>
       </div>
     </section>
-
-    <section id='myStack'>
-      <div class='stackHead'>
-        <h1>MY TECH  STACK</h1>
+    <section id='skills'>
+    <div id='skillsHeading'>
+      <h1>MY <br> TECH STACK</h1>
+    </div>
+      <div id='skillsContent'>
+        <div class="skillBox" id='html'>
+          <div id='skillBoxIcon'>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div id='skillBoxText'>
+            <h1>HTML</h1>
+            <p>
+              HTML happens to be one of my favorite things to write. Learning and using HTML made it even more interestiong, allowing us to build even better accessible sites. I have been writing HTML for over 2 years now.  
+            </p>
+          </div>
+       </div>
+       <div class="skillBox" id='css'>
+         <div id='skillBoxIcon'>
+           <div></div>
+         </div>
+         <div id='skillBoxText'>
+           <h1>CSS</h1>
+           <p>
+             Since I was 7, I always wanted to be an artist and feel creative, but still felt I wasn't so good at drawing. 
+             When I clocked 20 years old and saw the magic I could do with CSS,
+             I felt a rush of hope, I realized I could build and design things people would love visually and enjoy using 
+           </p>
+         </div>
       </div>
-      <div id='tracks'>
-        <div id=track>
-          <div id=maintrack></div>
-          <h3>HTML</h3>
+      <div class="skillBox" id='js'>
+        <div id='skillBoxIcon'>
+          <div class="containJsIcons">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-        <div id=track>
-          <div id=maintrack></div>
-          <h3>CSS</h3>
-        </div>
-        <div id=track>
-          <div id=maintrack></div>
-          <h3>JAVASCRIPT</h3>
-        </div>
-        <div id=track>
-          <div id=maintrack></div>
-          <h3>REACT JS</h3>
-        </div>
-        <div id=track>
-          <div id=maintrack></div>
-          <h3>FIGMA</h3>
-        </div>
+        <div id='skillBoxText'>
+         <h1>JAVASCRIPT</h1>
+         <p>
+           To be honest, I disliked Javascript when I began. But along the way, I realized how powerful it makes me(us). 
+           The first time I displayed my users' current time with JS, I felt like a pro hacker 
+           and realizing that is the least of things I can do makes me excited about 
+           what I can accomplish with Javascript. 
+         </p>
+       </div>
+    </div>
+    <div class="skillBox" id='react'>
+     <div id='skillBoxIcon'>
+       <div></div>
+     </div>
+     <div id='skillBoxText'>
+       <h1>REACT</h1>
+       <p>
+         Writing HTML is fun, but sometimes you have to write components multiple times. This is where REACT.JS comes 
+         to the rescue. Learning react has made me able to build reusable and even more powerful components, 
+         it has also aided me to build really fast web apps that make life easier for me and the users. 
+       </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section id="tools">
+    <h1>TOOLS</h1>
+    <div class="toolsBoxes">
+      <div id="toolsBox">
+        <div id="toolsBoxImg"></div>
+        <h2>FIREBASE</h2>
+        <P>(BASS)</P>
       </div>
-    </section>
-
+      <div id="toolsBox">
+        <div id="toolsBoxImg"></div>
+        <h2>FIGMA</h2>
+        <P>(DESIGN TOOL)</P>
+      </div>
+      <div id="toolsBox">
+        <div id="toolsBoxImg"></div>
+        <h2>VSCODE</h2>
+        <P>(CODE EDITOR)</P>
+      </div>
+      <div id="toolsBox">
+        <div id="toolsBoxImg"></div>
+        <h2>GIT</h2>
+        <P>(VERSION CONTROL)</P>
+      </div>
+      <div id="toolsBox">
+        <div id="toolsBoxImg"></div>
+        <h2>GITHUB</h2>
+        <P>(CODE HOSTING)</P>
+      </div>
+    </div>
+  </section>
     <section id='portfolio'> 
       <div id='portfolioHead'>
         <h1>MY <br> PORTFOLIO</h1>
@@ -165,16 +219,6 @@
               The site hightlight all his goodies. TIP:  Mr. Shane is also my mentor and Boss.
             </p>
             <a href='https://github.com/codiejay/sneub'><button>VISIT SITE</button></a>
-          </div>
-        </div>
-        <div id='portFolioThree'>
-          <div id='portfolioBlockImg'></div>
-          <div id='portfolioBlockText'>
-            <h1>PHOTO WAKA</h1>
-            <p>
-              When I was told I was going to work for this NPMO I ws excited. I had always wanted to be part of a community, but having the oppourtunity given to me and also given a chance to build it website(ongoing) was a great one for me. I work closely with the creative team to make sure every component i build reflets the orgs. values
-            </p>
-            <a href='https://photowaka.com/'><button>VISIT SITE</button></a>
           </div>
         </div>
         <div id='portFolioFour'>

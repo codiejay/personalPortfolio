@@ -304,47 +304,11 @@ body {
      }
   }
 
-  #quote { 
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    font-family: $baseMontserratFont;
-    padding: 17% 4%;
-      & div { 
-        width: 60%;
-        line-height: 1.5em;
-        font-size: 1.19em;
-        position: relative;
-      }
-      & div:nth-child(1)::after{ 
-        width: 200px;
-        height: 200px;
-        content: '';
-        display: block;
-        background: url('../assets/quote\(1\).svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        position: absolute;
-        right: -90%;
-        top: 10%;
-        opacity: 0.3;
-
-      }
-      & #quoteTwo { 
-        width: 80%;
-        padding-left: 30%;
-        margin-top: 30%;
-        
-      }
-      
-  } 
-
   #goods { 
     height: 100vh;
     // padding-top: 13%;
     background-color:  $baseOrange;
-    margin-bottom: 9em;
+    margin-bottom: 0em;
     position: relative;
       &::after { 
         width: 260px;
@@ -420,75 +384,237 @@ body {
       }
   }
 
-  #myStack { 
-    height: 100vh;  
-    font-family: $baseMontserratFont;
-    padding: 0% 8%;
-    margin-top: 16%;
-    margin-bottom: 10em;
-    & .stackHead { 
-      color: $baseOrange;
-      font-size: 2em;
-      margin-bottom: 3em;
-      text-align: center;
-    }
-    & #tracks { 
-      text-align: center;
-      & #track { 
-        text-align: left;
-        width: 80%;
-        margin: 10vh auto;
-        & #maintrack { 
-          height: 13px;
-          background-color: #E1E1E1;
-          border-radius: 200px;
-          position: relative;
-          &::before { 
-            height: 13px;
-            background-color: $baseOrange;
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            border-radius: 200px;
+  #skills { 
+    background:  #f8f8f8;
+    padding: 3em 0; 
+     & #skillsHeading { 
+       h1 {
+         font-family: $baseMontserratFont;
+         color: $baseOrange;
+         font-size: 3em;
+         margin: 1.2em  0;
+         width: 90%; 
+         padding-left: 1em;
+       }
+     }
+
+     & #skillsContent {  
+       display: grid;
+       grid-template-columns: repeat(3, 35%);
+       gap: 2em;
+       max-width: 80%; 
+       padding-left: 4em;
+         & .skillBox { 
+           position: relative;
+           margin: 1em auto 0em auto;
+           padding: 10px;
+           background-color: white;
+           box-shadow: 0 0  9px 3px rgba(128, 128, 128, 0.11);
+             & #skillBoxIcon { 
+               display: block;
+               width: 30%;
+               height: 70px;
+               background-color: transparent;
+               margin-bottom: 1.4em;
+             }
+             & #skillBoxText { 
+               h1 { 
+                 color: $baseBrown;
+                 font-family: $baseMontserratFont;
+                 font-weight: lighter;
+                 font-size: 1.5em;
+                 margin-bottom: 1.4em;
+                 font-weight: 900;
+                 letter-spacing: 0.09em;
+               }
+               p {
+                 line-height: 2em;
+                 font-family: $baseMontserratFont;
+                 width: 90%;
+                 margin-bottom: 1em;
+                 font-size: 0.8em;
+                 font-weight: lighter;
+                 letter-spacing: 0.04em;
+               }
+             }
+             #skillBoxExpertise { 
+               display: block;
+               position: absolute;
+               bottom: 2%;
+               left: 4%;
+               display: grid;
+               grid-template-columns: 60% 30%; 
+               width: 100%;
+               & h2 { 
+                 text-transform: uppercase;
+                 color: $baseBrown;
+                 font-size: 1.3em;
+                 font-family: $baseMontserratFont;
+               }
+               & #level { 
+                 display: grid;
+                 grid-template-columns: repeat(5, 20%);
+                   div { 
+                     width: 20px;
+                     height: 20px;
+                     background-color: $baseBrown;
+                     margin: 0 auto;
+                     border-radius: 200px;
+                   }
+               }
+             }
+         }
+
+         #html { 
+             
+            #skillBoxIcon { 
+                div:nth-child(1) { 
+                  width: 29%;
+                  height: 5px;
+                  background-color: #c4c4c4;
+                  margin-bottom: 5px;
+                  margin-top: 10%;
+                  animation: htmlIcons 0.8s infinite alternate-reverse;
+                }
+                div:nth-child(2) { 
+                  width: 47%;
+                  height: 5px;
+                  background-color: #c4c4c4;
+                  margin-bottom: 5px;
+                  margin-top: 10%;
+                  animation: htmlIcons 0.8s infinite alternate-reverse;
+                  animation-delay: 0.4s;
+                }
+                div:nth-child(3) { 
+                  width: 13%;
+                  height: 5px;
+                  background-color: $baseBrown;
+                  margin-bottom: 5px;
+                  margin-top: 10%;
+                  animation: htmlIcons 0.8s infinite alternate-reverse;
+                  animation-delay: 0.5s
+                }
+            }
+         }
+         #css { 
+          #skillBoxIcon { 
+            div { 
+              width: 60%;
+              height: 70px;
+              background-color: $baseOrange;
+              animation: cssIcon 2s infinite alternate-reverse;
+            }
+          }
+       }
+       #js { 
+        #skillBoxIcon { 
+          .containJsIcons { 
+            // background-color: rgb(80, 80, 80);
+            width: 100%;
+              div { 
+                width: 60%;
+                height: 3px;
+                background-color: red;
+                margin: 1em 0 ;
+                animation: movingJsIconLong 0.5s infinite alternate-reverse;  
+              }
+              div:nth-child(2) { 
+                width: 40%;
+                margin-left: 40%;
+                animation: movingJsIconShort 0.5s infinite alternate-reverse;
+              }
           }
         }
-        &:nth-child(1) ::before { 
-          width: 95%;
+       }
+       #react { 
+        #skillBoxIcon { 
+          div { 
+            width: 20px;
+            height: 20px;
+            background-color: $baseBrown;
+            animation: reactGrowth 1s steps(100, end) infinite 
+          }
         }
-        &:nth-child(2) ::before { 
-          width: 80%;
-        }
-        &:nth-child(3) ::before { 
-          width: 45%;
-        }
-        &:nth-child(4) ::before { 
-          width: 36%;
-        }
-        &:nth-child(5) ::before { 
-          width: 65%;
-        }
-      }
-    }
+       }
+     }
   }
-  
+  #tools { 
+    font-family: $baseMontserratFont;
+    padding: 2em 0;
+    text-align: center;
+      h1:nth-child(1) { 
+        font-weight: lighter;
+        margin-bottom: 3em;
+        color: $baseBrown;
+      }
+      .toolsBoxes { 
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+          #toolsBox { 
+            font-weight: lighter;
+              #toolsBoxImg { 
+                width: 50%;
+                height: 100px;
+                background: url(./assets/images/stackFIGMA.svg) no-repeat;
+                background-size: contain;
+                background-position: center;
+                margin: 1em auto;
+              }
+              h2 { 
+                font-weight: lighter;
+                font-size: 1.5em;
+              }
+              p { 
+                font-weight: 900;
+                color: $baseOrange
+              }
+          }
+
+          #toolsBox:nth-child(1) { 
+            #toolsBoxImg { 
+              background: url(./assets/images/stackFIREBASE.svg) no-repeat;
+              background-size: contain;
+              background-position: center;
+            }     
+          }
+          #toolsBox:nth-child(2) { 
+            #toolsBoxImg { 
+              background: url(./assets/images/stackFIGMA.svg) no-repeat;
+              background-size: contain;
+              background-position: center;
+            }     
+          }
+          #toolsBox:nth-child(3) { 
+            #toolsBoxImg { 
+              background: url(./assets/images/stackVSCODE.svg) no-repeat;
+              background-size: contain;
+              background-position: center;
+            }     
+          }
+          #toolsBox:nth-child(4) { 
+            #toolsBoxImg { 
+              background: url(./assets/images/stackGIT.svg) no-repeat;
+              background-size: contain;
+              background-position: center;
+            }     
+          }
+          #toolsBox:nth-child(5) { 
+            #toolsBoxImg { 
+              background: url(./assets/images/stackGITHUB.svg) no-repeat;
+              background-size: contain;
+              background-position: center;
+            }     
+          }
+      }
+
+  }
   #portfolio { 
     background-color: $baseOrange;
     font-family: $baseMontserratFont;
     padding: 5% 7%;
     position: relative;
       &::before { 
-        width: 100vw;
-        height: 300vh;
-        content: '';
-        display: block;
-        background: url('../assets/lineConnect.svg');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 0;
-        transform: rotate(160deg) scaleX(-5);
+        display: none;
       }
       & #portfolioHead { 
         font-size: 1.9em;
@@ -505,7 +631,7 @@ body {
         & #portFolioSix  { 
           color: white;
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 2fr 1.6fr;
           margin: 5em 0 10em 0;
           align-content: space-around;
           justify-content: space-between;
@@ -515,7 +641,7 @@ body {
           z-index: 0;
             & #portfolioBlockImg { 
               height: 45vh;
-              width: 85vh;
+              width: 100%;
               background: url('../assets/tayoAina.png');
               background-repeat: no-repeat;
               background-position: center;
@@ -709,88 +835,6 @@ body {
           }
         }
       }
-  }
-  
-  #testimony { 
-    padding: 1em 7%;
-    font-family: $baseMontserratFont;
-    & #testimonyHead { 
-      font-size: 1.9em;
-      color: $baseOrange;
-      margin-bottom: 2em;
-    }
-    & #testimonyCards { 
-      display: grid;
-      grid-template-columns: 50% 50%;
-      
-       & .testimonyCard { 
-         width: 30vw;
-         margin: 3em auto;
-         position: relative;
-         cursor: pointer;
-           & #testimonyCardImg { 
-             width: 80px;
-             height: 80px;
-             background: url('../assets/sneubheadshot.jpg');
-             background-position: center;
-             background-size: contain;
-             border: 1px solid $baseOrange;
-             border-radius: 200px;
-             position: absolute;
-             top: -17%;
-             left: -10%;
-           }
-           & #testimonyCardTxt { 
-            line-height: 1.6em;
-            width: 80%;
-            height: auto;
-            background-color: white;
-            border: 1.3px solid $baseOrange;
-            padding: 2em 0.8em 0 0.8em;
-            border-radius: 5px;
-            box-shadow: 6px 8px 4px rgba(107, 87, 87, 0.1);
-            position: relative;
-            margin-bottom: 3em;
-            transition: all 0.3s ease-in-out ;
-              &::before { 
-                width: 100%;
-                height: 100%;
-                content: '';
-                background-color: rgba(238, 69, 64, 0.51);
-                display: block;
-                position: absolute;
-                z-index: -3;
-                top: -5%;
-                box-shadow: 6px 8px 4px rgba(107, 87, 87, 0.1);
-                border: 1px solid #EE4540;
-                left: -5%;
-               } 
-              & #testimonyCardName { 
-                padding-top: 3em;
-                  & h1 { 
-                    color: $baseOrange;
-                  }
-                  & p { 
-                    color: rgb(27, 27, 27);
-                  }
-              }  
-          }
-       }
-       & .testimonyCard:nth-child(2) { 
-        & #testimonyCardImg { 
-          background: url('../assets/tayoHeadshot.jpg');
-          background-position: center;
-          background-size: cover;
-        }
-      }
-      & .testimonyCard:nth-child(3) { 
-        & #testimonyCardImg { 
-          background: url('../assets/armstrongHeadshot.jpg');
-          background-position: center;
-          background-size: cover;
-        }
-      }
-    }
   }
 
   #contact { 
@@ -1022,25 +1066,6 @@ body {
           }
       }
 
-      #quote { 
-        height: auto;
-        padding: 12% 2%;
-          & div { 
-            width: 80%;
-            font-size: 0.99em;
-          }
-          & div:nth-child(1)::after { 
-           width: 120px;
-           height: 120px;
-           right: -30%;
-           top: 30%;
-          }
-          & #quoteTwo { 
-            padding-left: 10%;
-            margin-top: 80%;
-            width: 90%
-          }
-      }
       #goods { 
         height: auto;
           &::after { 
@@ -1058,12 +1083,22 @@ body {
           }
       }
 
-      #myStack { 
-        padding: 0 4%;
-        height: auto;
-          & #tracks { 
-            & #track { 
-              margin: 3vh auto;
+      #skills { 
+          & #skillsContent { 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 90%;
+            gap: 3em;
+          }
+      }
+
+      #tools { 
+        font-size: 0.8em;
+          .toolsBoxes { 
+            #toolsBox { 
+              #toolsBoxImg {
+                width: 30%
+              }
             }
           }
       }
@@ -1074,7 +1109,11 @@ body {
         } 
         padding: 2% 3%;
           & #portfolioList { 
-            & #portFolioOne, & #portFolioTwo, & #portFolioThree { 
+            & #portFolioOne, 
+            & #portFolioTwo, 
+            & #portFolioFour,
+            & #portFolioFive,
+            & #portFolioSix { 
               padding: 3em 0 0em 0;
               display: block;
                 & #portfolioBlockImg { 
@@ -1105,7 +1144,7 @@ body {
 }
 
 // Mobile Breakpoint
-@media (min-width: 320px) and (max-width: 480px) {  
+@media (min-width: 320px) and (max-width: 680px) {  
   body { 
     $baseOrange: #EE4540;
     $baseBrown: #510A32;
@@ -1177,40 +1216,6 @@ body {
           position: relative; 
         }
       }
-
-      #quote { 
-        padding: 0;
-        display: block;
-        text-align: right;
-        height: auto;
-          & div { 
-            width: 100%;
-            font-size: 0.8em;
-          }
-          & div:nth-child(1) {
-            padding: 5px;
-            margin: 0 0 auto 0;
-            // visibility: hidden;
-            color: transparent;
-            text-align: right;
-            width: 80%;
-              &::after { 
-                width: 100px;
-                height: 100px;
-                right: 20%;
-                top: 200%
-              }
-          }
-          & #quoteTwo { 
-            padding: 5px 0px 3em 0;
-            margin-top: 40%;
-            width: 100%;
-            text-align: center;
-            font-size: 1.2em;
-           
-          }
-      }
-
       #goods { 
         height: auto;
           &::after { 
@@ -1236,20 +1241,33 @@ body {
           }
       }
 
-      #myStack { 
-        height: auto;
-        padding: 0;
-        margin-top: 3%;
-        margin-bottom: 5%;
-          & .stackHead { 
-            font-size: 1.5em;
+      #skills { 
+        & #skillsHeading { 
+          h1 {
+            font-size: 2em;
           }
-          & #tracks { 
-              #track { 
-                width: 90%;
-                margin: 6vh auto;
-              }
+        }
+        & #skillsContent { 
+          display: block;
+          max-width: 90%;
+          margin: 0 auto;
+          padding: 0;
+            .skillBox { 
+              margin-bottom: 2em;
+            }
+        }
+      }
+
+      #tools { 
+      h1:nth-child(1) { 
+        margin: 1em;
+      }
+      .toolsBoxes { 
+        display: block;
+          #toolsBox { 
+            margin: 3em 0;
           }
+      }
       }
 
       #portfolio { 
@@ -1391,5 +1409,70 @@ body {
   }
   to { 
     transform: rotate(360deg);
+  }
+}
+@keyframes htmlIcons { 
+  from { 
+    width: 1%;
+  }
+  to { 
+    width: 70%;
+  }
+}
+@keyframes cssIcon { 
+  0% { 
+
+  }
+
+  20% { 
+    border-radius: 200px;
+  }
+  40% { 
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    border-radius: 0px;
+    background-color: #510A32;
+  }
+  60% { 
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  80% { 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  100% { 
+    border-radius: 0px;
+    clip-path: 0px;
+  }
+}
+
+@keyframes movingJsIconLong { 
+  from { 
+
+  }
+  to { 
+    margin: 1em 0 1em 40%;
+  }
+}
+
+@keyframes movingJsIconShort { 
+  from { 
+
+  }
+  to { 
+    margin-left: 20%;
+  }
+}
+@keyframes reactGrowth { 
+  0% { 
+    
+  }
+  20% { 
+    width: 100%;
+  }
+  40% { 
+    height: 60%;
+  }
+  60% { 
+    width: 30%;
+    height: 100%;
   }
 }
