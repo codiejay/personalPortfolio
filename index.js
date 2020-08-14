@@ -87,6 +87,7 @@ $('document').ready(() => {
       appId: '1:1007627688629:web:17c4a447c8394563b2fcfc',
       measurementId: 'G-0FCL7HKDY3'
   };
+  firebase.analytics();
   firebase.initializeApp(firebaseConfig);
   let db = firebase.firestore();
   $(form.children('button')).on('click', (e) => {
@@ -99,7 +100,6 @@ $('document').ready(() => {
           email: userEmail,
           message: userMessage
       }).then(() => {
-          console.log('it worked!!!');
           form.hide(1000);
           $($('.contactHeading').children()[0]).text('THANKS, I GOT YOUR MESSAGE');
           $($('.contactHeading').children()[1]).text(`I would get back to you as soon as possible! you can reach me directly  though `);

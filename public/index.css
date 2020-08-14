@@ -694,7 +694,8 @@ body #portfolio #portfolioList #portFolioTwo,
 body #portfolio #portfolioList #portFolioThree,
 body #portfolio #portfolioList #portFolioFour,
 body #portfolio #portfolioList #portFolioFive,
-body #portfolio #portfolioList #portFolioSix {
+body #portfolio #portfolioList #portFolioSix,
+body #portfolio #portfolioList #portFolioSeven {
   color: white;
   display: -ms-grid;
   display: grid;
@@ -717,7 +718,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockImg,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockImg,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockImg,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockImg,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockImg {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockImg,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg {
   height: 45vh;
   width: 100%;
   background: url("../assets/tayoAina.png");
@@ -732,7 +734,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockImg::after,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockImg::after,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockImg::after,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockImg::after,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockImg::after {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockImg::after,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg::after {
   width: 100%;
   height: 100%;
   content: '';
@@ -753,7 +756,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText h1,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText h1,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText h1,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText h1,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText h1 {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText h1,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText h1 {
   font-size: 2.3em;
   margin-bottom: 1.3em;
 }
@@ -763,7 +767,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText p,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText p,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText p,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText p,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText p {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText p,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText p {
   line-height: 2em;
 }
 
@@ -772,7 +777,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText a,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText a,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText a,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText a,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText a {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText a,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText a {
   cursor: pointer;
 }
 
@@ -781,7 +787,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText button,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText button,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText button,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText button,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText button {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText button,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText button {
   padding: 2% 22% 2% 3%;
   border: 1px solid transparent;
   background-color: white;
@@ -802,7 +809,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText button:hover,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText button:hover,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText button:hover,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText button:hover,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText button:hover {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText button:hover,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText button:hover {
   border-radius: 0px;
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
@@ -813,7 +821,8 @@ body #portfolio #portfolioList #portFolioTwo #portfolioBlockText button::before,
 body #portfolio #portfolioList #portFolioThree #portfolioBlockText button::before,
 body #portfolio #portfolioList #portFolioFour #portfolioBlockText button::before,
 body #portfolio #portfolioList #portFolioFive #portfolioBlockText button::before,
-body #portfolio #portfolioList #portFolioSix #portfolioBlockText button::before {
+body #portfolio #portfolioList #portFolioSix #portfolioBlockText button::before,
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockText button::before {
   width: 32px;
   height: 32px;
   content: '';
@@ -938,6 +947,30 @@ body #portfolio #portfolioList #portFolioSix #portfolioBlockImg::after {
   content: '';
   display: block;
   background: url("../assets/issProject.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 15%;
+  right: -15%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg {
+  background: url("../assets/reacttodobyjames.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+
+body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg::after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block;
+  background: url("../assets/reacttodobyjames.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1399,7 +1432,8 @@ body footer #copyright {
   body #portfolio #portfolioList #portFolioThree,
   body #portfolio #portfolioList #portFolioFour,
   body #portfolio #portfolioList #portFolioFive,
-  body #portfolio #portfolioList #portFolioSix {
+  body #portfolio #portfolioList #portFolioSix,
+  body #portfolio #portfolioList #portFolioSeven {
     margin-bottom: 4em;
     display: block;
     padding: 5px;
@@ -1409,7 +1443,8 @@ body footer #copyright {
   body #portfolio #portfolioList #portFolioThree #portfolioBlockImg,
   body #portfolio #portfolioList #portFolioFour #portfolioBlockImg,
   body #portfolio #portfolioList #portFolioFive #portfolioBlockImg,
-  body #portfolio #portfolioList #portFolioSix #portfolioBlockImg {
+  body #portfolio #portfolioList #portFolioSix #portfolioBlockImg,
+  body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg {
     width: 94%;
     height: 25vh;
     margin-bottom: 2em;
@@ -1419,7 +1454,8 @@ body footer #copyright {
   body #portfolio #portfolioList #portFolioThree #portfolioBlockImg::after,
   body #portfolio #portfolioList #portFolioFour #portfolioBlockImg::after,
   body #portfolio #portfolioList #portFolioFive #portfolioBlockImg::after,
-  body #portfolio #portfolioList #portFolioSix #portfolioBlockImg::after {
+  body #portfolio #portfolioList #portFolioSix #portfolioBlockImg::after,
+  body #portfolio #portfolioList #portFolioSeven #portfolioBlockImg::after {
     right: -7%;
   }
   body #portfolio #portfolioList #portFolioOne #portfolioBlockText h1,
@@ -1427,7 +1463,8 @@ body footer #copyright {
   body #portfolio #portfolioList #portFolioThree #portfolioBlockText h1,
   body #portfolio #portfolioList #portFolioFour #portfolioBlockText h1,
   body #portfolio #portfolioList #portFolioFive #portfolioBlockText h1,
-  body #portfolio #portfolioList #portFolioSix #portfolioBlockText h1 {
+  body #portfolio #portfolioList #portFolioSix #portfolioBlockText h1,
+  body #portfolio #portfolioList #portFolioSeven #portfolioBlockText h1 {
     margin-bottom: 0.3em;
   }
   body #testimony {
