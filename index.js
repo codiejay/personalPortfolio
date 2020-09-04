@@ -23,7 +23,7 @@ $('document').ready(() => {
               headerContainer.css('transform', 'scale(1)');
           }
       });
-  }, options)
+  }, options);
   observer.observe(intersector[0]);
   const openMenu = () => {
       $(header).animate({
@@ -87,24 +87,30 @@ $('document').ready(() => {
       appId: '1:1007627688629:web:17c4a447c8394563b2fcfc',
       measurementId: 'G-0FCL7HKDY3'
   };
-  firebase.analytics();
   firebase.initializeApp(firebaseConfig);
   let db = firebase.firestore();
-  $(form.children('button')).on('click', (e) => {
-      e.preventDefault();
-      const userName = $(formChildren[0]).val();
-      const userEmail = $(formChildren[1]).val();;
-      const userMessage = $(formChildren[2]).val();
-      db.collection('userMessage').doc().set({
-          name: userName,
-          email: userEmail,
-          message: userMessage
-      }).then(() => {
-          form.hide(1000);
-          $($('.contactHeading').children()[0]).text('THANKS, I GOT YOUR MESSAGE');
-          $($('.contactHeading').children()[1]).text(`I would get back to you as soon as possible! you can reach me directly  though `);
-      }).catch((e) => {
-          console.log(`error: ${e}`)
-      });
+
+  $(form).submit((e) => { 
+    e.preventDefault();
+    if(
+        $(formChildren[0]).val() &&
+        $(formChildren[1]).val() &&
+        $(formChildren[2]).val()
+    ) { 
+        const userName = $(formChildren[0]).val();
+        const userEmail = $(formChildren[1]).val();;
+        const userMessage = $(formChildren[2]).val();
+        db.collection('userMessage').doc().set({
+            name: userName,
+            email: userEmail,
+            message: userMessage
+        }).then(() => {
+            form.hide(1000);
+            $($('.contactHeading').children()[0]).text('THANKS, I GOT YOUR MESSAGE');
+            $($('.contactHeading').children()[1]).text(`I would get back to you as soon as possible! you can reach me directly  though `);
+        }).catch((e) => {
+            return;
+        });
+    }
   })
 })
